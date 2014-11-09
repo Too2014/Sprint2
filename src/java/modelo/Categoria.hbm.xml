@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-08-2014 03:34:14 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="modelo.Categoria" table="categoria" schema="public">
+        <id name="idcategoria" type="int">
+            <column name="idcategoria" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="encuesta" class="modelo.Encuesta" fetch="select">
+            <column name="idencuesta" not-null="true" />
+        </many-to-one>
+        <property name="nombrecategoria" type="string">
+            <column name="nombrecategoria" length="50" not-null="true" />
+        </property>
+        <property name="descripcioncategoria" type="string">
+            <column name="descripcioncategoria" length="140" not-null="true" />
+        </property>
+        <set name="preguntas" inverse="true">
+            <key>
+                <column name="idcategoria" not-null="true" />
+            </key>
+            <one-to-many class="modelo.Pregunta" />
+        </set>
+    </class>
+</hibernate-mapping>

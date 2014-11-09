@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-08-2014 03:34:14 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="modelo.Usuario" table="usuario" schema="public">
+        <id name="idusuario" type="string">
+            <column name="idusuario" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreusuario" type="string">
+            <column name="nombreusuario" length="50" not-null="true" />
+        </property>
+        <property name="contrasena" type="string">
+            <column name="contrasena" length="50" not-null="true" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="tipo" length="24" not-null="true" />
+        </property>
+        <set name="encuestas" inverse="true">
+            <key>
+                <column name="idusuario" length="20" not-null="true" />
+            </key>
+            <one-to-many class="modelo.Encuesta" />
+        </set>
+    </class>
+</hibernate-mapping>
