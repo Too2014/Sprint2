@@ -9,8 +9,8 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
-    <bean id="ingresousuario" class="controller.Crear_Usuario" p:procesos-ref="procesos" />
-    <bean id="consultausuario" class="controller.Consultar_Usuarios" />
+    <bean id="ingresousuario" class="controller.Crear_Usuario" p:proceso-ref="procesos" />
+    <bean id="consultausuario" class="controller.Consultar_Usuario" />
     <bean id="eliminausuario" class="controller.Eliminar_Usuario" p:procesos-ref="procesos"/>
     <bean id="modificausuario" class="controller.Modificar_Usuario" p:procesos-ref="procesos"/>
     

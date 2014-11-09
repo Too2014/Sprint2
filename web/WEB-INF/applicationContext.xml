@@ -9,7 +9,7 @@
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
     <!--agregar beans para que se pueda ejecutar la logica del negocio --> 
-    <bean name="procesos " class="modelo.Procesos"/>
+    <bean name= "procesos " class="modelo.Procesos"/>
     
     <!--bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"

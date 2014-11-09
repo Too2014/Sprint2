@@ -29,5 +29,4 @@ public class Consultar_Usuario implements Controller{
         mv.addObject("message", out);
         return mv;
     }
-    
 }
