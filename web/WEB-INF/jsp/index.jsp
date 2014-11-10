@@ -9,15 +9,18 @@
     </head>
 
     <body>
-        <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
-        <p><i>To display a different welcome page for this project, modify</i>
-            <tt>index.jsp</tt> <i>, or create your own welcome page then change
-                the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new
-                welcome page and also update the welcome-file setting in</i>
-            <tt>web.xml</tt>.</p>
-        <a href="consulta_usuario.htm">Consultar_Users</a>
-        <a href="ingreso_usuario.htm">Registrar</a>
-        <a href="eliminar_usuario.htm">Eliminar</a>
-        <a href="modificar_usuario.htm">Modificar</a>
+        <h1>Gstión de Usuario <h3>sí se logea como administrador</h3> </h1>
+        <br><br><br><br>
+        <a href="consulta_usuario.htm">Consultar_Users</a><br><br>
+        <a href="ingreso_usuario.htm">Registrar</a><br><br>
+        <a href="eliminar_usuario.htm">Eliminar</a><br><br>
+        <a href="modificar_usuario.htm">Modificar</a><br><br><br>
+        
+                <h1>Gestion de encuestas <h3>sí se logea como Usuario (normal)</h3></h1>
+<br><br><br>
+        <a href="ingreso_encuesta.htm">Nueva Encuesta</a><br><br>
+        <a href="consulta_encuesta.htm">Ver Encuestas</a><br><br>
+        <a href="modificar_encuesta.htm">Modificar Encuesta</a><br><br>
+        <a href="eliminar_encuesta.htm">Eliminar Encuesta</a>
     </body>
 </html>

@@ -71,10 +71,6 @@ public class Encuesta  implements java.io.Serializable {
     public void setArchivoses(Set<Archivos> archivoses) {
         this.archivoses = archivoses;
     }
-
-
-
-
 }
 
 

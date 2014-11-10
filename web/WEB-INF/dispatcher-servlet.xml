@@ -14,6 +14,13 @@
     <bean id="eliminausuario" class="controller.Eliminar_Usuario" p:procesos-ref="procesos"/>
     <bean id="modificausuario" class="controller.Modificar_Usuario" p:procesos-ref="procesos"/>
     
+    
+    <bean id="consultaencuesta" class="controller.Consultar_Encuesta" />
+    <bean id="modificaencuesta" class="controller.Modificar_Encuesta" p:procesos-ref="procesos"/>
+    <bean id="ingresoencuesta" class="controller.Crear_Encuesta" p:proceso-ref="procesos" />
+    <!-- <bean id="eliminaencuesta" class="controller.Eliminar_Encuesta" p:procesos-ref="procesos"/>
+     -->
+     
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
@@ -22,6 +29,12 @@
                 <prop key="consulta_usuario.htm">consultausuario</prop>
                 <prop key="eliminar_usuario.htm">eliminausuario</prop>
                 <prop key="modificar_usuario.htm">modificausuario</prop>
+                
+                
+                <prop key="consulta_encuesta.htm">consultaencuesta</prop>
+                <prop key="modificar_encuesta.htm">modificaencuesta</prop>
+                 <prop key="ingreso_encuesta.htm">ingresoencuesta</prop>
+                 <!--<prop key="eliminar_encuesta.htm">eliminaencuesta</prop>-->
             </props>
         </property>
     </bean>

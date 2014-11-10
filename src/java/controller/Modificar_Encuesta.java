@@ -26,7 +26,7 @@ public class Modificar_Encuesta extends SimpleFormController {
         //in the Web Application Context
 
         setCommandClass(Encuesta.class);
-        setCommandName("modificar");
+        setCommandName("modificarE");
         setSuccessView("consulta_encuesta");
         setFormView("modificar_encuesta");
     }
