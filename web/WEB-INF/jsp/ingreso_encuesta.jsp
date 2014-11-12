@@ -4,11 +4,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Nuevo usuario.</title>
+        <title>Nueva Encuesta.</title>
     </head>
     <body bgcolor="#CEE3F6"><br><br><br><br><br><br><br>
     <font face ="jokerman" color="black"><center><h1>Nueva Encuesta</h1></center></font>
-    <spring:nestedPath path="ingresar">
+    <spring:nestedPath path="ingresarE">
         <form action=""  method="post">
             <center>         
                 <table border="2">
@@ -28,7 +28,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>CONTRASENA</th>
+                        <th>Descripción</th>
                         <td>
                             <spring:bind path="descripcion">
                                 <input type="text" name="${status.expression}" value="${status.value}">

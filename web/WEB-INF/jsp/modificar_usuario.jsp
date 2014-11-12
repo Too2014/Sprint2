@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Escriba su Nombre</title>
+        <title>Modificar Usuarios</title>
     </head>
     <body bgcolor="#CEE3F6"><br><br><br><br><br><br><br>
     <font face ="jokerman" color="black"><center><h1>MODIFICACION DE USUARIOS</h1></center></font>

@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>${mensaje}</title>
+        <title>Ver_usuarios</title>
     </head>
     <body>
     <body bgcolor="#CEE3F6"><br><br><br><br><br><br><br>

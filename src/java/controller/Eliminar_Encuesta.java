@@ -13,11 +13,15 @@ import org.springframework.web.servlet.view.RedirectView;
 
 public class Eliminar_Encuesta extends SimpleFormController {
     private Procesos procesos;
+
+    public void setProcesos(Procesos procesos) {
+        this.procesos = procesos;
+    }
     public Eliminar_Encuesta() {
         //Initialize controller properties here or 
         //in the Web Application Context
         setCommandClass(Encuesta.class);
-         setCommandName("eliminar");
+         setCommandName("eliminarE");
         setSuccessView("consulta_encuesta");
         setFormView("eliminar_encuesta");
     }

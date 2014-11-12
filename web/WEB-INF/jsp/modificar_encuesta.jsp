@@ -4,10 +4,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Nueva Encuesta.</title>
+        <title>Modificar Encuesta.</title>
     </head>
     <body bgcolor="#CEE3F6"><br><br><br><br><br><br><br>
-    <font face ="jokerman" color="black"><center><h1>CREAR NUEVA ENCUESTA</h1></center></font>
+    <font face ="jokerman" color="black"><center><h1>MODIFICAR ENCUESTA</h1></center></font>
     <spring:nestedPath path="modificarE">
         <form action=""  method="post">
             <center>         

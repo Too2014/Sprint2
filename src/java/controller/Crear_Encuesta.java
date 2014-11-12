@@ -23,12 +23,12 @@ public class Crear_Encuesta extends SimpleFormController {
         this.procesos = proceso;
     }
      public Crear_Encuesta(){
-        setCommandClass(Usuario.class);
+        setCommandClass(Encuesta.class);
         // SERVIRA PARA EL PATH QUE ESTA EN LA VISTA
-        setCommandName("ingresar");
-        setSuccessView("consulta_usuario");
+        setCommandName("ingresarE");
+        setSuccessView("consulta_encuesta");
         //NOMBRE DE LA VISTA
-        setFormView("ingreso_usuario");
+        setFormView("ingreso_encuesta");
     }
     
     @Override

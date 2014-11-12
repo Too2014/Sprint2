@@ -5,11 +5,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Escriba su Nombre</title>
+        <title>Eliminar Encuesta</title>
     </head>
     <body bgcolor="#CEE3F6"><br><br><br><br><br><br><br>
-    <font face ="jokerman" color="black"><center><h1>ELIMINAR USUARIOS</h1></center></font>
-    <spring:nestedPath path="eliminar">
+    <font face ="jokerman" color="black"><center><h1>ELIMINAR ENCUESTA</h1></center></font>
+    <spring:nestedPath path="eliminarE">
 
         <form action=""  method="post">
 

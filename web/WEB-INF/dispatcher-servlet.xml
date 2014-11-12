@@ -18,8 +18,8 @@
     <bean id="consultaencuesta" class="controller.Consultar_Encuesta" />
     <bean id="modificaencuesta" class="controller.Modificar_Encuesta" p:procesos-ref="procesos"/>
     <bean id="ingresoencuesta" class="controller.Crear_Encuesta" p:proceso-ref="procesos" />
-    <!-- <bean id="eliminaencuesta" class="controller.Eliminar_Encuesta" p:procesos-ref="procesos"/>
-     -->
+    <bean id="eliminaencuesta" class="controller.Eliminar_Encuesta" p:procesos-ref="procesos"/>
+     
      
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">

@@ -4,12 +4,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>${mensaje}</title>
+        <title>Ver_Encuestas</title>
     </head>
     <body>
     <body bgcolor="#CEE3F6"><br><br><br><br><br><br><br>
     <font face ="jokerman" color="black"><center><h1>LISTADO DE ENCUESTA DEL SISTEMA</h1></center></font>
-    <h3>${mensaje}</h3>
+    <h3>${menssagr}</h3>
     <br/>
     <center>
         <h3>${holaMensaje}</h3>
