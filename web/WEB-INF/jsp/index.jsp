@@ -22,5 +22,7 @@
         <a href="consulta_encuesta.htm">Ver Encuestas</a><br><br>
         <a href="modificar_encuesta.htm">Modificar Encuesta</a><br><br>
         <a href="eliminar_encuesta.htm">Eliminar Encuesta</a>
+    
+        <a href="categoria.htm">categoria</a>
     </body>
 </html>

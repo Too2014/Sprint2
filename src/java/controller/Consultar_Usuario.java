@@ -19,7 +19,7 @@ public class Consultar_Usuario implements Controller{
             Session session = HibernateUtil.getSessionFactory().getCurrentSession();
             session.beginTransaction();
             //nombre de la tabla de la base de datos
-            List result = session.createQuery("from Usuario").list();
+            List result = session.createQuery("select * from \"public\".usuario").list();
             //se utilizará para el 
             mv.addObject("usuarios", result);
             session.getTransaction().commit();

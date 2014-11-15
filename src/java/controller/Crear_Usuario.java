@@ -34,7 +34,7 @@ public class Crear_Usuario extends SimpleFormController{
         //se asignan los datos a la bd 
         procesos.crear_usuario(datos.getIdusuario(),datos.getNombreusuario(),datos.getContrasena(),datos.getTipo());
         //esto nos redirige a la paginas donde estan todos los datos ya ingresados
-        return new ModelAndView(new RedirectView("consulta_Usuario.htm"));
+        return new ModelAndView(new RedirectView("consulta_usuario.htm"));
         
     }
     

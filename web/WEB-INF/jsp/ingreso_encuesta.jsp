@@ -44,10 +44,8 @@
                 </table></center>
         </form>
         <center>
-         <a  href="consulta_encuesta.htm">Consultar</a>
-            <a href="eliminar_encuesta.htm">Eliminar</a>
-            <a href="index.htm">Inicio</a>
-            <a href="modificar_encuesta.htm">Modificar</a>
+         <a  href="categoria.htm"> Categoria de preguntas</a>
+            
             </center>
     </spring:nestedPath>
 </body>

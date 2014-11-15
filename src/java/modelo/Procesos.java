@@ -1,8 +1,10 @@
 package modelo;
 
+import java.awt.image.ImageObserver;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import javax.swing.*;
 
 public class Procesos {
     public void crear_usuario(String id,String nombre,String contrasena, String tipo){
@@ -15,9 +17,9 @@ public class Procesos {
             Connection con = DriverManager.getConnection(url, user, passwor);
             Statement consulta = con.createStatement();
             //consulta sql
-            consulta.executeUpdate("insert into usuario (idusuario,nombreusuario,contrasena,tipo) values('" + id + "','" + nombre + "','" + contrasena + "'");
+            consulta.executeUpdate("insert into usuario(idusuario, nombreusuario, contrasena, tipo) values('" + id + "','" + nombre + "','" + contrasena + "','"+tipo+"'");
             consulta.executeUpdate("update usuario SET  idusuario='" + id + "',nombreusuario='" + nombre + "',contrasena='" + contrasena + "',tipo='" + tipo + "'WHERE idusuario=" + id + "");
-            
+            JOptionPane.showMessageDialog(null,"se insertó con éxito ");
             consulta.close();
             con.close();
         } catch (Exception e) {
@@ -35,7 +37,7 @@ public class Procesos {
             Connection con = DriverManager.getConnection(url, user, passwor);
             Statement consulta = con.createStatement();
             consulta.executeUpdate("delete from usuario where idusuario =" + id + "");
-            System.out.println("Datos guardados correctamente");
+            System.out.println("Usuario eliminado correctamente");
             consulta.close();
             con.close();
         } catch (Exception e) {
@@ -75,14 +77,13 @@ public class Procesos {
             Connection con = DriverManager.getConnection(url, user, passwor);
             Statement consulta = con.createStatement();
             //consulta sql
-            consulta.executeUpdate("insert into encuesta (idencuesta,nombreencuesta,descripcion,tipo) values('" + id + "','" + nombre + "','" + descripcion+ "'");
-            consulta.executeUpdate("update encuesta SET  idencuesta='" + id + "',nombreencuesta='" + nombre + "',descripcion='" 
-                    + descripcion + "'WHERE idencuesta=" + id + "");
-            
+            consulta.executeUpdate("insert into encuesta (idencuesta,nombreencuesta,descripcion) values('" + id + "','" + nombre + "','" + descripcion+ "'");
+            consulta.executeUpdate("update encuesta SET  idencuesta='" + id + "',nombreencuesta='" + nombre + "',descripcion='"+ descripcion + "'WHERE idencuesta=" + id + "");
+            JOptionPane.showMessageDialog(null,"se insertó con éxito "); 
             consulta.close();
             con.close();
         } catch (Exception e) {
-            
+          JOptionPane.showMessageDialog(null,"no se puedo Insertar ");  
         }
     }
     
@@ -158,5 +159,24 @@ public void eliminar_categoria(Integer id) {
         } catch (Exception e) {
             System.out.println("Error en la conexion");
         }
-    }    
+    }
+    public void crear_categoria(Integer id,String nombre,String descripcionC){
+     String url = "jdbc:postgresql://localhost:5432/postgres";
+        String driver ="org.postgresql.Driver";
+        String user = "postgres";
+        String passwor ="too2014";
+        try {
+            Class.forName(driver);
+            Connection con = DriverManager.getConnection(url, user, passwor);
+            Statement consulta = con.createStatement();
+            //consulta sql
+            consulta.executeUpdate("insert into categoria (idcategoria,nombrecategoria,descripcioncategoria) values('" + id + "','" + nombre + "','" + descripcionC+ "'");
+            consulta.executeUpdate("update encuesta SET  idencuesta='" + id + "',nombreencuesta='" + nombre + "',descripcion='"+ descripcionC + "'WHERE idencuesta=" + id + "");
+            JOptionPane.showMessageDialog(null,"se insertó con éxito "); 
+            consulta.close();
+            con.close();
+        } catch (Exception e) {
+          JOptionPane.showMessageDialog(null,"no se puedo Insertar ");  
+        }
+    } 
 }

@@ -19,7 +19,7 @@ public class Consultar_Encuesta implements Controller{
             Session session = HibernateUtil.getSessionFactory().getCurrentSession();
             session.beginTransaction();
             //nombre de la tabla de la base de datos
-            List result = session.createQuery("from Encuesta").list();
+            List result = session.createQuery("from encuesta").list();
             //se utilizará para el 
             mv.addObject("encuestas", result);
             session.getTransaction().commit();

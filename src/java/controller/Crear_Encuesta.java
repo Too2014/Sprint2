@@ -40,7 +40,7 @@ public class Crear_Encuesta extends SimpleFormController {
         //se asignan los datos a la bd 
         procesos.crear_encuesta(datos.getIdencuesta(),datos.getNombreencuesta(),datos.getDescripcion());
         //esto nos redirige a la paginas donde estan todos los datos ya ingresados
-        return new ModelAndView(new RedirectView("consulta_encuesta.htm"));
+        return new ModelAndView(new RedirectView("categoria.htm"));
         
     }
 }

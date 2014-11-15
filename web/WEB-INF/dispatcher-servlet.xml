@@ -19,22 +19,35 @@
     <bean id="modificaencuesta" class="controller.Modificar_Encuesta" p:procesos-ref="procesos"/>
     <bean id="ingresoencuesta" class="controller.Crear_Encuesta" p:proceso-ref="procesos" />
     <bean id="eliminaencuesta" class="controller.Eliminar_Encuesta" p:procesos-ref="procesos"/>
-     
+
+    
+    <bean id="modificacategoria" class="controller.Modificar_Categoria" p:procesos-ref="procesos"/>
+    <bean id="ingresocategoria" class="controller.Crear_Categoria" p:procesos-ref="procesos" />
+    <bean id="consultacategoria" class="controller.Consultar_Categoria" />  
+    <bean id="eliminacategoria" class="controller.Eliminar_Categoria" p:procesos-ref="procesos"/>   
      
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
+                 <!-- props para las usuario (CRUD Y PRINCIPAL(será despues de login))--> 
                 <prop key="index.htm">indexController</prop>
                 <prop key="ingreso_usuario.htm">ingresousuario</prop>
                 <prop key="consulta_usuario.htm">consultausuario</prop>
                 <prop key="eliminar_usuario.htm">eliminausuario</prop>
                 <prop key="modificar_usuario.htm">modificausuario</prop>
-                
-                
+               
+               
+                <!-- props para las Encuestas (CRUD Falta la pagina principal)-->  
                 <prop key="consulta_encuesta.htm">consultaencuesta</prop>
                 <prop key="modificar_encuesta.htm">modificaencuesta</prop>
-                 <prop key="ingreso_encuesta.htm">ingresoencuesta</prop>
-                 <!--<prop key="eliminar_encuesta.htm">eliminaencuesta</prop>-->
+                <prop key="ingreso_encuesta.htm">ingresoencuesta</prop>
+                <prop key="eliminar_encuesta.htm">eliminaencuesta</prop>
+                <!-- props para las categorias (CRUD Y PRINCIPAL)--> 
+               <prop key="categoria.htm">gestionCategoria</prop>
+               <prop key="consulta_categoria.htm">consultacategoria</prop>
+               <prop key="eliminar_categoria.htm">eliminacategoria</prop>
+               <prop key="modificar_categoria.htm">modificacategoria</prop>
+                <prop key="ingreso_categoria.htm">ingresocategoria</prop>
             </props>
         </property>
     </bean>
@@ -47,5 +60,8 @@
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
+    <bean name="gestionCategoria"
+class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+p:viewName="categoria"/>
 
 </beans>
